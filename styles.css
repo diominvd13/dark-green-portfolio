@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Raleway', sans-serif;
+	background: #000;
+	scroll-behavior: smooth;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.nav {
+	display: flex;
+	justify-content: center;
+	margin: 0 0 auto 0;
+}
+.navEl {
+	margin: 20px 20px;
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #828282;
+	transition: 0.35s;
+}
+.navEl:hover {
+	color: #32bf70;
+	text-shadow: 0 0 20px #626262;
+}
+.headerContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto auto auto;
+}
+.logo {
+	margin: 0 auto 20px auto;
+	width: 60px;
+	filter: brightness(1);
+}
+.headerTitle {
+	margin: auto;
+	font-size: 25px;
+	font-weight: 500;
+	color: #fff;
+}
+.headerTitle > span {
+	color: #32bf70;
+}
+.headerSubtitle {
+	margin: auto;
+	font-size: 18px;
+	font-weight: 500;
+	color: #828282;
+}
+.headerButton {
+	margin: 20px auto 0 auto;
+	width: 140px;
+	height: 40px;
+	background: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	color: #000;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+	transition: 0.35s;
+}
+.headerButton:hover {
+	cursor: pointer;
+	background: #32bf70;
+	color: #fff;
+	box-shadow: 0 0 20px #32bf70;
+}
+.about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 40px 0;
+}
+.title {margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	font-size: 25px;
+	font-weight: 500;
+	color: #32bf70;
+}
+.subtitle {
+	margin-bottom: 30px;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	color: #828282;
+}
+.text {
+	margin: 10px auto;
+	width: 60%;
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+}
+.advantages {
+	display: flex;
+	flex-direction: column;
+}
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 0 16%;
+}
+.card {
+	position: relative;
+	margin: 20px 20px;
+	width: 350px;
+	height: 200px;
+	background: #000;
+	border-radius: 7px;
+	transition: 0.35s;
+}
+.card:before {
+	position: absolute;
+	content: '';
+	width: 354px;
+	height: 204px;
+	top: -2px;
+	bottom: -2px;
+	resize: -2px;
+	left: -2px;
+	background: linear-gradient(45deg, rgba(13,247,167,1) 0%, rgba(0,0,0,1) 50%, rgba(4,245,237,1) 100%);
+	border-radius: 7px;
+	z-index: -1;
+	opacity: 0;
+	transition: 0.35s;
+}
+.card:after {
+	position: absolute;
+	content: '';
+	width: 354px;
+	height: 204px;
+	top: -2px;
+	bottom: -2px;
+	resize: -2px;
+	left: -2px;
+	background: linear-gradient(45deg, rgba(13,247,167,1) 0%, rgba(0,0,0,1) 50%, rgba(4,245,237,1) 100%);
+	z-index: -2;
+	opacity: 0;
+	filter: blur(20px);
+	transition: 0.35s;
+}
+.card:hover {
+	cursor: pointer;
+}
+.card:hover::before, .card:hover::after {
+	opacity: 1;
+}
+.cardTitle {
+	margin: 20px 20px;
+	font-size: 20px;
+	font-weight: 600;
+	color: #32bf70;
+}
+.cardText {
+	margin: 20px 20px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+}
+.resume {
+	display: flex;
+	flex-direction: column;
+}
+.resumeBlock {
+	margin: 20px auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+}
+.resumeTitle {
+	font-size: 15px;
+	font-weight: 600;
+	color: #32bf70;
+}
+.resumeText {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+}
+.progressBarTitle {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+}
+.progressBar {
+	margin: 10px 0;
+	height: 5px;
+	width: 50%;
+	background: #292929;
+	border-radius: 3px;
+}
+.progress {
+	height: 5px;
+	background: #32bf70;
+	border-radius: 3px;
+	animation: 5s progressBarAnimation, 5s progressBarLight infinite;
+}
+.progress#html {
+	width: 80%;
+}
+.progress#js {
+	width: 20%;
+}
+.progress#php {
+	width: 10%;
+}
+.progress#ps {
+	width: 70%;
+}
+@keyframes progressBarAnimation {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: max;
+	}
+}
+@keyframes progressBarLight {
+	0% {
+		box-shadow: 0 0 20px #000;
+	}
+	50% {
+		box-shadow: 0 0 20px #0df7a7;
+	}
+	100% {
+		box-shadow: 0 0 20px #000;
+	}
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+}
+.linkBlock {
+	display: flex;
+	flex-direction: row;
+	margin: 5px 0;
+}
+.linkBlockHref, .linkBlockTitle {
+	width: 50%;
+	font-family: monospace, serif;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: #828282;
+	transition: 0.35s;
+}
+.linkBlockTitle {
+	padding-right: 10px ;
+	text-align: right;
+}
+.linkBlockHref {
+	padding-left: 10px;
+	text-align: left;
+	text-decoration: none;
+}
+.linkBlockHref:hover {
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 0 0 20px #c6c6c6;
+}
